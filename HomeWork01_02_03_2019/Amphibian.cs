@@ -4,14 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeWork02_16_03_2019
+namespace Vehicles
 {
-    class Program
+    class Amphibian : IMove, ISwim
     {
-        static void Main(string[] args)
-        {
-
-
-        }
     }
 }

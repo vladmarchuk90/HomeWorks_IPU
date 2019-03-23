@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeWork02_16_03_2019
+namespace Vehicles
 {
-    class Program
+    interface ISwim
     {
-        static void Main(string[] args)
-        {
-
-
-        }
+        void Swim();
     }
 }
