@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    public class CCar : CVehicle
+    public class CCar : CVehicle, IMove
     {
         public CCar()
         {
@@ -15,6 +15,11 @@ namespace Vehicles
         public CCar(double price, float speed, int yearOfProduction, Coordinate coordinate)
             : base(price, speed, yearOfProduction, coordinate)
         { 
+        }
+
+        public void Drive()
+        {
+            Console.WriteLine($"We're driving with speed {Speed}");
         }
 
         public override string ToString()

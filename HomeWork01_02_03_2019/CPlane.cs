@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    public class CPlane : CVehicle, ISeatingCapacity
+    public class CPlane : CVehicle, ISeatingCapacity, IFly
     {
         private int seatingCapacity;
         private int height; // in meters above the ground
@@ -34,6 +34,11 @@ namespace Vehicles
         {
             get { return height; }
             set { if (value >= 0) height = value; }
+        }
+
+        public void Fly()
+        {
+            Console.WriteLine($"We're flying at the height {Height} with speed {Speed}");
         }
 
         public override string ToString()

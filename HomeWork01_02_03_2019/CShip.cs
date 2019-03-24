@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    public class CShip : CVehicle, ISeatingCapacity
+    public class CShip : CVehicle, ISeatingCapacity, ISwim
     {
         private int seatingCapacity;
 
@@ -30,6 +30,11 @@ namespace Vehicles
             set { if (value >= 0) seatingCapacity = value; }
         }
         public string HomePort { get; set; }
+
+        public void Swim()
+        {
+            Console.WriteLine($"We're swimming with speed {Speed}");
+        }
 
         public override string ToString()
         {

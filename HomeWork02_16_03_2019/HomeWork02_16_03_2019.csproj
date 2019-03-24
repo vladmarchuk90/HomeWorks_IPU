@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B97225D9-6449-43BD-B89E-71DFDA96E4FE}</ProjectGuid>
+    <ProjectGuid>{9B918BE0-CAD0-497B-B335-A36B9E37CEF8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Vehicles</RootNamespace>
-    <AssemblyName>HomeWork01_02_03_2019</AssemblyName>
+    <RootNamespace>HomeWork02_16_03_2019</RootNamespace>
+    <AssemblyName>HomeWork02_16_03_2019</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,25 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Amphibian.cs" />
-    <Compile Include="BatMobile.cs" />
-    <Compile Include="CCar.cs" />
-    <Compile Include="Coordinate.cs" />
-    <Compile Include="CPlane.cs" />
-    <Compile Include="CShip.cs" />
-    <Compile Include="CVehicle.cs" />
-    <Compile Include="CVehiclesUtil.cs" />
-    <Compile Include="IFly.cs" />
-    <Compile Include="IMove.cs" />
-    <Compile Include="ISeatingCapacity.cs" />
-    <Compile Include="ISwim.cs" />
-    <Compile Include="PredicatesForConditions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

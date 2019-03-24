@@ -145,5 +145,16 @@ namespace Vehicles
 
             return vehicle;
         }
+
+        public static List<CVehicle> GetAllAtAnyCondition(List<CVehicle> vehiclesList, Func<CVehicle, bool> predicate)
+        {
+            //List<CVehicle> vehicles = (from veh in vehiclesList
+            //                           where veh.Coordinate.Longitude == 0
+            //                           select veh).ToList();
+
+            List<CVehicle> vehicles = vehiclesList.Where(predicate).OrderBy(v=>v.Price).ToList<CVehicle>();
+
+            return vehicles;
+        }
     }
 }
