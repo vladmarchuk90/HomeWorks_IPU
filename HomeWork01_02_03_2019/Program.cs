@@ -37,6 +37,7 @@ namespace Vehicles
             13. Get the biggest seating capacity
             14. Get the smallest seating capacity
             15. Get the biggest seating capacity among plane
+            16. Get the vehicle by any condition
         If you gonna leave press button 'q'";
 
             CVehicle vehicle = null;
@@ -57,7 +58,7 @@ namespace Vehicles
                 //int option;
                 int.TryParse(answer, out int option);
 
-                if (option > 0 && option <= 15)
+                if (option > 0 && option <= 16)
                 {
                     switch (option)
                     {
@@ -105,6 +106,9 @@ namespace Vehicles
                             break;
                         case 15:
                             seatingCapacity = CVehiclesUtil.GetTheBiggestSeatingCapacityAmongPlane(seatingCapacities);
+                            break;
+                        case 16:
+                            vehicles = CVehiclesUtil.GetAllAtAnyCondition(vehiclesList, PredicatesForConditions.Predicate);
                             break;
                     }
 

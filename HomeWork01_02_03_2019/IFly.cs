@@ -8,5 +8,6 @@ namespace Vehicles
 {
     interface IFly
     {
+        void Fly();
     }
 }

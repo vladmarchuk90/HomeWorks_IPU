@@ -8,5 +8,6 @@ namespace Vehicles
 {
     interface IMove
     {
+        void Drive();
     }
 }

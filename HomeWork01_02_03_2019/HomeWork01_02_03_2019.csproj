@@ -43,13 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Amphibian.cs" />
+    <Compile Include="BatMobile.cs" />
     <Compile Include="CCar.cs" />
     <Compile Include="Coordinate.cs" />
     <Compile Include="CPlane.cs" />
     <Compile Include="CShip.cs" />
     <Compile Include="CVehicle.cs" />
     <Compile Include="CVehiclesUtil.cs" />
+    <Compile Include="IFly.cs" />
+    <Compile Include="IMove.cs" />
     <Compile Include="ISeatingCapacity.cs" />
+    <Compile Include="ISwim.cs" />
+    <Compile Include="PredicatesForConditions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

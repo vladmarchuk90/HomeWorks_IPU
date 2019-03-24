@@ -152,7 +152,7 @@ namespace Vehicles
             //                           where veh.Coordinate.Longitude == 0
             //                           select veh).ToList();
 
-            List<CVehicle> vehicles = vehiclesList.Where(predicate).ToList<CVehicle>();
+            List<CVehicle> vehicles = vehiclesList.Where(predicate).OrderBy(v=>v.Price).ToList<CVehicle>();
 
             return vehicles;
         }

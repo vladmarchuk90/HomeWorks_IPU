@@ -38,7 +38,7 @@ namespace Vehicles
 
         public void Fly()
         {
-            Console.WriteLine($"We're flying at the height {Height} with speed {Speed}"); ;
+            Console.WriteLine($"We're flying at the height {Height} with speed {Speed}");
         }
 
         public override string ToString()
