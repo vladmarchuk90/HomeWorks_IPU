@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace Observer
 {
-    //[Serializable]
-    public class WeatherInfo
+    public class WeatherInfo : IEquatable<WeatherInfo>
     {
         public double Temperature { get; set; }
         public double Humidity { get; set; }
         public double Pressure { get; set; }
         public string City { get; set; }
 
-        public override bool Equals(object obj)
+        public bool Equals(WeatherInfo other)
         {
-            if (!(obj is WeatherInfo weatherInfo))
+            if (other == null)
                 return false;
 
-            return Math.Abs(Temperature - weatherInfo.Temperature) < 0.5 &&
-                Math.Abs(Humidity - weatherInfo.Humidity) < 0.5 &&
-                Math.Abs(Pressure - weatherInfo.Pressure) < 0.5;
+            return Math.Abs(Temperature - other.Temperature) < 0.5 &&
+                Math.Abs(Humidity - other.Humidity) < 0.5 &&
+                Math.Abs(Pressure - other.Pressure) < 0.5;
         }
 
         public override string ToString()

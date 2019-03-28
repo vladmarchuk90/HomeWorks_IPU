@@ -11,6 +11,7 @@ namespace Observer
 {
     public class OpenWeatherManager
     {
+        // using the third-party library that working with OpenWeather API "https://github.com/swiftyspiffy/OpenWeatherMap-API-CSharp"
         public static OpenWeatherAPI.OpenWeatherAPI client;
         //Now it's just a catalog where would be files with names by city and stored info of last weather parameters
         private string databaseCatalog;  
@@ -49,7 +50,6 @@ namespace Observer
 
         public WeatherInfo GetWeatherInfo(string city)
         {
-            // using the third-party library that working with OpenWeather API "https://github.com/swiftyspiffy/OpenWeatherMap-API-CSharp"
             try
             {
                 if(client == null)
@@ -72,7 +72,7 @@ namespace Observer
             }
             catch (Exception e)
             {
-                throw new OpenWeatherAPIException("Can't get result at that time. See info in inner exception.", e);
+                throw new OpenWeatherAPIException("Can't get result at that time by connection to OpenWeatherMap", e);
             }
         }
 
@@ -81,6 +81,7 @@ namespace Observer
             bool weatherIsChanged = true;
             string fileName = Path.Combine(DatabaseCatalog, city + ".xml");
 
+            // check the previous record about weather in gotten city
             if (File.Exists(fileName))
             {
                 XmlSerializer reader = new XmlSerializer(typeof(WeatherInfo));
